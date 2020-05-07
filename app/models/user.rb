@@ -9,7 +9,5 @@ class User < ApplicationRecord
 
   validates_uniqueness_of :email
   has_secure_password
-
-  # This is an awesome alternate way to fix enum roles!!!!
-  enum role: %i[default admin]
+  enum role: ["default", "admin"]
 end
